@@ -5,5 +5,5 @@ import org.springframework.stereotype.Repository;
 import tn.esprit.autoloc.domain.Vehicule;
 
 @Repository
-public interface VehiculeRepository extends JpaRepository<Vehicule, Long> {
+public interface IVehiculeRepository extends JpaRepository<Vehicule, Long> {
 }
