@@ -37,5 +37,6 @@ public class Contrat {
     private Reservation reservation;
 
     @OneToMany(mappedBy = "contrat", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @com.fasterxml.jackson.annotation.JsonManagedReference("contrat-paiements")
     private List<Paiement> paiements = new ArrayList<>();
 }

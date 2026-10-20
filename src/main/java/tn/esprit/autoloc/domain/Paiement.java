@@ -32,5 +32,6 @@ public class Paiement {
     private ModePaiement modePaiement;
 
     @ManyToOne(fetch = FetchType.LAZY)
+    @com.fasterxml.jackson.annotation.JsonBackReference("contrat-paiements")
     private Contrat contrat;
 }

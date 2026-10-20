@@ -57,6 +57,7 @@ public class Vehicule {
     private Set<Equipement> equipements = new HashSet<>();
 
     @OneToMany(mappedBy = "vehicule", cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @com.fasterxml.jackson.annotation.JsonIgnore
     private List<Maintenance> maintenances = new ArrayList<>();
 
     public Vehicule(Long idVehicule, String immatriculation, String marque, String modele,
